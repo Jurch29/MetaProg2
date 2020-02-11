@@ -18,6 +18,22 @@ public abstract class Terme extends Expression implements Cloneable {
 		this.f = f;
 	}
 	
+	public Expression getE1() {
+		return e1;
+	}
+
+	public void setE1(Expression e1) {
+		this.e1 = e1;
+	}
+
+	public Expression getE2() {
+		return e2;
+	}
+
+	public void setE2(Expression e2) {
+		this.e2 = e2;
+	}
+
 	@Override
 	public String toString() {
 		return "("+this.e1+this.operateur+this.e2+')';

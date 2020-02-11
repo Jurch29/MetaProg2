@@ -2,6 +2,8 @@ package expression;
 
 import java.util.Map;
 
+import stackengine.Machine;
+
 public class Variable extends Expression {
 	
 	protected final Character LABEL;
@@ -20,5 +22,11 @@ public class Variable extends Expression {
 		if (registre.containsKey(this.LABEL))
 			return registre.get(this.LABEL).eval();
 		return null;
+	}
+
+	@Override
+	public void toInst(Machine m) {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -15,8 +15,21 @@ public class Main {
 		// TODO Auto-generated method stub
 		testExpression();
 		testStack();
+		testExp2Map();
 	}
 	
+	private static void testExp2Map() {
+		// TODO Auto-generated method stub
+		Expression e1 = new Division(new Nombre(7), new Nombre(2));
+		Expression e2 = new Addition(e1, new Variable('a'));
+		
+		Machine m = new Machine();
+		m.store('a', 1.5);
+		Expression.exp2map(m, e2);
+		System.out.println();
+		System.out.println(m);
+	}
+
 	private static void testStack() {
 		Machine m = new Machine();
 		m.store('a', 1.5);
